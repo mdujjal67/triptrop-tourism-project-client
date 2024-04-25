@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
           element:<Login></Login>
         },
         {
-          path: 'footer',
+          path: '/footer',
           element: <Footer></Footer>
       },
       {
