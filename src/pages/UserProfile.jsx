@@ -10,7 +10,7 @@ const UserProfile = () => {
     const { user } = UseAuth()
 
     useEffect((() => {
-        document.title = "Haven Vista | User-Profile"
+        document.title = "Haven Vista | "
     }), [])
 
     return (

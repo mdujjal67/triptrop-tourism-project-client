@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import UseAuth from "./UseAuth";
+import logo from "../assets/travel-logo.png"
+import "../App.css"
 
 
 const Navbar = () => {
@@ -31,12 +33,16 @@ const Navbar = () => {
 
                             <Link className="bg-gray-100 text-[#131313CC] hover:text-[#23BE0A] p-2 rounded-xl mb-2" to='/myList'>My List</Link>
 
-                            {
+                            {/* {
                                 user && (<Link className="bg-gray-100 text-[#131313CC] hover:text-[#23BE0A] p-2 rounded-xl mb-2" to='/userProfile'>User Profile</Link>)
-                            }
+                            } */}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost text-[18px] md:text-lg lg:text-xl hover:bg-[#22be0ad8] hover:text-white">Haven Vista</Link>
+                    <Link to='/' className="btn btn-ghost text-[18px] md:text-lg lg:text-xl hover:bg-[#22be0ad8] hover:text-white">
+                        <div className="flex items-center">
+                            <img className="w-14" src={logo} alt="" />
+                        </div>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -57,7 +63,7 @@ const Navbar = () => {
                 {/* navbar end section */}
                 <div className="navbar-end grid ml-28 lg:ml-auto -mt-4 md:-mt-auto lg:-mt-auto">
                     {user ?
-                        <NavLink to='/user-profile'>
+                        <NavLink to='/login'>
                             <div
                             className="dropdown dropdown-end flex items-center"
                             onMouseEnter={() => setShowUserName(true)}

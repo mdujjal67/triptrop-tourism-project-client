@@ -6,7 +6,6 @@ import Footer from "../pages/Footer";
 import Root from "../layout/Root";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
-import UserProfile from "../pages/UserProfile";
 import AllTouristsSpot from "../pages/AllTouristsSpot";
 import AddTouristsSpot from "../pages/AddTouristsSpot";
 import MyList from "../pages/MyList";
@@ -29,10 +28,6 @@ export const router = createBrowserRouter([
         {
           path:'/login',
           element:<Login></Login>
-        },
-        {
-            path: '/userProfile',
-            element: <UserProfile></UserProfile>
         },
         {
             path: '/allTouristsSpot',
