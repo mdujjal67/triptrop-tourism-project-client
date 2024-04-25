@@ -7,6 +7,10 @@ import Root from "../layout/Root";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import UserProfile from "../pages/UserProfile";
+import AllTouristsSpot from "../pages/AllTouristsSpot";
+import AddTouristsSpot from "../pages/AddTouristsSpot";
+import MyList from "../pages/MyList";
+import PrivateRoute from "../component/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -29,6 +33,22 @@ export const router = createBrowserRouter([
         {
             path: '/userProfile',
             element: <UserProfile></UserProfile>
+        },
+        {
+            path: '/allTouristsSpot',
+            element: <AllTouristsSpot></AllTouristsSpot>,
+        },
+        {
+            path: '/addTouristsSpot',
+            element: <PrivateRoute>
+                <AddTouristsSpot></AddTouristsSpot>
+            </PrivateRoute> ,
+        },
+        {
+            path: '/myList',
+            element: <PrivateRoute>
+                <MyList></MyList>
+            </PrivateRoute> ,
         },
         {
           path: '/footer',
