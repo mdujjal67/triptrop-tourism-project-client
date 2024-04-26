@@ -3,6 +3,7 @@ import { useState } from "react";
 import UseAuth from "./UseAuth";
 import logo from "../assets/travel-logo.png"
 import "../App.css"
+import { Tooltip } from 'react-tooltip'
 
 
 const Navbar = () => {
@@ -38,10 +39,12 @@ const Navbar = () => {
                             } */}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost text-[18px] md:text-lg lg:text-xl hover:bg-[#22be0ad8] hover:text-white">
-                        <div className="flex items-center">
-                            <img className="w-14" src={logo} alt="" />
-                        </div>
+                    <Link to='/' className="btn btn-ghost text-[18px] md:text-lg lg:text-xl hover:text-white">
+                        <a data-tooltip-id="my-tooltip" data-tooltip-content="Tourism Management">
+                            <div className="flex items-center">
+                                <img className="w-16" src={logo} alt="" />
+                            </div>
+                        </a>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -61,7 +64,7 @@ const Navbar = () => {
 
 
                 {/* navbar end section */}
-                <div className="navbar-end grid ml-28 lg:ml-auto -mt-4 md:-mt-auto lg:-mt-auto">
+                <div className="navbar-end flex ml-28 lg:ml-auto -mt-4 md:-mt-auto lg:-mt-auto">
                     {user ?
                         <NavLink to='/login'>
                             <div
@@ -81,17 +84,20 @@ const Navbar = () => {
                                     </div>
                                 </label>
                             )}
-                            <button onClick={handleSignOut} className="btn btn-sm btn-ghost hover:bg-[#22be0ac8] text-white bg-[#23BE0A] lg:ml-2 hover:text-white">Log Out</button>
+                            
                         </div>
                         </NavLink>
                         :
                         <Link to='/login'>
-                            <button className="btn btn-sm btn-ghost hover:bg-[#22be0ad8] hover:text-white">Login</button>
+                            <button className="btn btn-sm btn-ghost hover:bg-violet-600 hover:text-white">Login</button>
                         </Link>
+                        
                     }
+                    <button onClick={handleSignOut} className="btn btn-sm btn-ghost hover:bg-violet-600 lg:ml-2 hover:text-white">Log Out</button>
 
                 </div>
             </div>
+            <Tooltip id="my-tooltip" />
         </div>
     );
 };

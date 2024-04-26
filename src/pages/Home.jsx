@@ -2,12 +2,14 @@
 import SwiperSlider from "../component/SwiperSlider";
 import Navbar from "../component/Navbar";
 import { useEffect } from "react";
+import TouristsSpots from "../component/TouristsSpots";
+import CountriesSection from "../component/CountriesSection";
 
 const Home = () => {
 
     // dynamic title
     useEffect((()=>{
-        document.title = "Haven Vista | Home"
+        document.title = "Tourism Management | Home"
     }),[])
 
 
@@ -16,6 +18,8 @@ const Home = () => {
             <Navbar></Navbar>
             <div>
                 <SwiperSlider></SwiperSlider>
+                <TouristsSpots></TouristsSpots>
+                <CountriesSection></CountriesSection>
             </div>
 
         </div>

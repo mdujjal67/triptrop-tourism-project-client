@@ -4,7 +4,7 @@ import 'animate.css';
 
 const BannerContent = () => {
     return (
-        <div className="animate__animated animate__slideInLeft">
+        <div className="animate__animated animate__fadeInUp">
             <div className="lg:w-3/5 lg:pl-10 pl-5 md:pl-5 pr-3">
                 <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white">Home is the starting place of love.</h1>
                 <p className="text-white py-7 text-[12px]">Step into a World of Opulence and Elegance

@@ -20,7 +20,7 @@ const Login = () => {
     const [loginError, setLoginError] = useState('')
 
     useEffect((() => {
-        document.title = "Haven Vista | Login"
+        document.title = "Tourism Management | Login"
     }), [])
 
     const { signInUser, googleLogin, gitHubLogin } = UseAuth()

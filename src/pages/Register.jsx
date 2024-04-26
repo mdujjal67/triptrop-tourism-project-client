@@ -48,7 +48,7 @@ const Register = () => {
 
       // dynamic title
     useEffect((()=>{
-        document.title = "Haven Vista | Register"
+        document.title = "Tourism Management | Register"
     }),[])
 
       //   for google login
