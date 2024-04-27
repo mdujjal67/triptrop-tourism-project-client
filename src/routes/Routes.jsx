@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                //   loader: () => fetch('/Estate.json'),
+                  loader: () => fetch('http://localhost:5000/addSpots'),
             },
             {
                 path: '/register',

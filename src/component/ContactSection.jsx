@@ -1,9 +1,48 @@
+import Swal from "sweetalert2";
 
 
 const ContactSection = () => {
+
+    // send data to the server 
+    const handleContactedUser = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const message = form.message.value;
+
+        const contactedUser = { name, email, message };
+
+        console.log(contactedUser)
+
+        // send data to the server 
+        fetch('http://localhost:5000/contactedUser', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(contactedUser)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Message Sent!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    });
+                    form.reset()
+                }
+            })
+
+    }
+
+
     return (
         <div className="my-[100px]">
-            <section className="py-10 dark:bg-gray-100 dark:text-gray-900">
+            <section className="py-10 dark:bg-gray-100 dark:text-gray-900 mx-auto container">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                     <div className="py-6 md:py-0 md:px-6">
                         <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -32,20 +71,20 @@ const ContactSection = () => {
                     </div>
                     
                     {/* form part */}
-                    <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                    <form onSubmit={handleContactedUser} noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                         <label className="block">
                             <span className="mb-1">Full name</span>
-                            <input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-100 py-3 focus:dark:ring-violet-600 dark:bg-gray-200 pl-3" />
+                            <input type="text" name="name" placeholder="Your Name" required className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-100 py-3 focus:dark:ring-violet-600 dark:bg-gray-200 pl-3" />
                         </label>
                         <label className="block">
                             <span className="mb-1">Email address</span>
-                            <input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-100 py-3 focus:dark:ring-violet-600 dark:bg-gray-200 pl-3" />
+                            <input type="email" name="email" placeholder="Your Email" required className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-100 py-3 focus:dark:ring-violet-600 dark:bg-gray-200 pl-3" />
                         </label>
                         <label className="block">
                             <span className="mb-1">Message</span>
-                            <textarea rows="5" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-200 pl-3"></textarea>
+                            <textarea rows="5" name="message" placeholder="Your Message" required className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-200 pl-3 pt-3"></textarea>
                         </label>
-                        <button type="button" className="self-center px-6 py-2 text-lg rounded-lg focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600">Submit</button>
+                        <input type="submit" name="submit" value="Send" className="btn btn-block bg-violet-600 text-white hover:text-black" />
                     </form>
                 </div>
             </section>

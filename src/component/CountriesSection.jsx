@@ -2,8 +2,8 @@
 
 const CountriesSection = () => {
     return (
-        <div className="my-[100px]">
-            <h1>This is Countries Section</h1>
+        <div className="my-[100px] mx-auto container">
+            <h1 className="text-4xl font-bold text-center">Countries</h1>
         </div>
     );
 };

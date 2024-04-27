@@ -10,7 +10,7 @@ const BannerContent = () => {
                 <p className="text-white py-7 text-[12px]">Embark on an Adventure to Discover the Beauty and Wonder
                     of Our World. From Majestic Landscapes to Vibrant Cultures,
                     Each Country Offers Unique Experiences and Memories to Treasure.</p>
-                <a href="#estate">
+                <a href="#tourist-spots">
                     <div className="relative">
                         <button className="pl-4 pr-10 py-2 text-white bg-violet-600 hover:bg-violet-800 hover:opacity-90 rounded-[8px]">Tourists Spots</button>
                         <FaCircleArrowRight className="text-white absolute top-[13px] left-[135px] hover:rotate-90" />
