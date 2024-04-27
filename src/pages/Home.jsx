@@ -4,6 +4,8 @@ import Navbar from "../component/Navbar";
 import { useEffect } from "react";
 import TouristsSpots from "../component/TouristsSpots";
 import CountriesSection from "../component/CountriesSection";
+import ContactSection from "../component/ContactSection";
+import ClientQuestions from "../component/ClientQuestions";
 
 const Home = () => {
 
@@ -20,6 +22,8 @@ const Home = () => {
                 <SwiperSlider></SwiperSlider>
                 <TouristsSpots></TouristsSpots>
                 <CountriesSection></CountriesSection>
+                <ClientQuestions></ClientQuestions>
+                <ContactSection></ContactSection>
             </div>
 
         </div>
