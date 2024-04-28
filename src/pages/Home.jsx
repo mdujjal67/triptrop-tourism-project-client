@@ -14,7 +14,7 @@ const Home = () => {
 
     // dynamic title
     useEffect((() => {
-        document.title = "Tourism Management | Home"
+        document.title = "TripTrove | Home"
     }), [])
 
 
