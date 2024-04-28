@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { IoLocationOutline } from "react-icons/io5";
 import { MdTravelExplore } from "react-icons/md";
+import { Link } from 'react-router-dom';
 // import UseAuth from './UseAuth';
 const TouristsSpotsCard = ({ touristSpot }) => {
     // const { user } = UseAuth()
@@ -11,6 +12,7 @@ const TouristsSpotsCard = ({ touristSpot }) => {
     return (
 
         <div>
+
             <div className=" container mx-auto mt-auto flex-grow">
                 <div className=" rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 relative p-4 lg:p-0 ">
                     <img src={imageURL} alt="photo" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500 rounded-lg lg:rounded-none" />
@@ -31,10 +33,15 @@ const TouristsSpotsCard = ({ touristSpot }) => {
                             </div>
                             <p className='absolute top-0 right-0 py-1 px-2 bg-violet-600 text-white rounded-xl text-[14px]'>{averageCost}</p>
                         </div>
-                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button>
+                        <Link to={`/home/${spotName}`}>
+                            <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50 hover:text-black hover:bg-gray-300">View Details</button>
+                        </Link>
+
                     </div>
                 </div>
             </div>
+
+
         </div>
     );
 };
