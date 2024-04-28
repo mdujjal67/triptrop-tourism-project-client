@@ -57,13 +57,13 @@ const AllTouristsSpot = () => {
                             className="w-full h-64 object-cover object-center transition-transform duration-300 transform hover:scale-105"
                         />
                         <div className="p-6 bg-white rounded-b-lg">
-                            <h2 className="text-xl font-semibold mb-2">{country.spotName}</h2>
-                            <p className="text-gray-800 dark:text-gray-400 mb-4">Average Cost: {country.averageCost}</p>
-                            <p className="text-gray-800 dark:text-gray-400 mb-4">Total Visitors: {country.totalVisitor}</p>
-                            <p className="text-gray-800 dark:text-gray-400 mb-4">Travel Time: {country.travelTime}</p>
-                            <p className="text-gray-800 dark:text-gray-400">Seasonality: {country.Seasonality}</p>
+                            <h2 className="text-2xl font-semibold mb-2">{country.spotName}</h2>
+                            <p className="text-gray-800 dark:text-gray-600 mb-4">Total Visitors: {country.totalVisitor}</p>
+                            <p className="text-gray-800 dark:text-gray-600 mb-4">Average Cost: {country.averageCost}</p>
+                            <p className="text-gray-800 dark:text-gray-600 mb-4">Travel Time: {country.travelTime}</p>
+                            <p className="text-gray-800 dark:text-gray-600">Seasonality: {country.Seasonality}</p>
                             
-                            <Link to={`/allTouristsSpot/${country.spotName}`}>
+                            <Link to={`/home/${country.spotName}`}>
                                 <button type="button" className="flex items-center justify-center w-full p-3 mt-5 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50 hover:text-black hover:bg-gray-300">View Details</button>
                             </Link>
                         </div>
