@@ -37,10 +37,10 @@ const AllTouristsSpot = () => {
     return (
         <div className="mb-[100px] mx-auto container">
             <Navbar />
-            <h1 className="text-4xl font-bold text-center mb-8">All Tourists Spots</h1>
+            <h1 className="text-4xl font-bold text-center mb-8 mt-14 md:mt-5 lg:mt-0">All Tourists Spots</h1>
 
             {/* Dropdown menu for sorting */}
-            <div className="flex justify-end mb-4">
+            <div className="flex justify-center mb-10">
                 <select onChange={handleSortChange} className="p-2 border rounded-md cursor-pointer">
                     <option className="cursor-pointer" value="">Sort by Average Cost</option>
                     <option className="cursor-pointer" value="asc">Low to High</option>
