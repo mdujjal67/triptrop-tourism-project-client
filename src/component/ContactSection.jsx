@@ -16,7 +16,7 @@ const ContactSection = () => {
         console.log(contactedUser)
 
         // send data to the server 
-        fetch('http://localhost:5000/contactedUser', {
+        fetch('https://tourism-management-server-delta.vercel.app/contactedUser', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

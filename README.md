@@ -1,4 +1,6 @@
-# Haven Vista Website
+# Tourism Management website
+
+# TripTrove Website
 
 Welcome to the TripTrove Tourism Management System! This platform allows users to explore and discover various tourist spots, along with detailed information and reviews.
 

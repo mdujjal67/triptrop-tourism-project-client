@@ -9,7 +9,7 @@ const SpotsSpecificCountry = () => {
     const [spotsSpecificCountry, setSpotsSpecificCountry] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addSpots`) // Fetch data from the /countries endpoint
+        fetch(`https://tourism-management-server-delta.vercel.app/addSpots`) // Fetch data from the /countries endpoint
             .then(res => res.json())
             .then(data => {
                 setSpotsSpecificCountry(data);

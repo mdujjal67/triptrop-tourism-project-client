@@ -24,7 +24,7 @@ const AddTouristsSpot = () => {
         console.log(newAddedSpot)
 
         // send data to the server 
-        fetch('http://localhost:5000/addSpots', {
+        fetch('https://tourism-management-server-delta.vercel.app/addSpots', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -66,7 +66,7 @@ const AddTouristsSpot = () => {
                             <div>
                                 <input type="text" name="spotName" required placeholder="Tourists Spot Name" className="input input-bordered text-black w-full md:w-[330px] focus:outline-none focus:ring focus:ring-opacity-50 py-3 focus:dark:ring-violet-600" />
                             </div>
-                            <div className="input-bordered required text-black w-64 lg:w-full md:w-[330px] focus:outline-none focus:ring focus:ring-opacity-50 py-2 focus:dark:ring-violet-600">
+                            <div className="input-bordered required text-black md:w-[330px] focus:outline-none focus:ring focus:ring-opacity-50 py-2 focus:dark:ring-violet-600">
                                 <select name="countryName" className="select select-bordered join-item text-black w-full md:w-[330px] focus:outline-none focus:ring focus:ring-opacity-50 py-3 focus:dark:ring-violet-600">
                                     <option disabled selected><span  className="">Select Country</span></option>
                                     <option className="text-xl py-1 text-gray-400">Bangladesh</option>

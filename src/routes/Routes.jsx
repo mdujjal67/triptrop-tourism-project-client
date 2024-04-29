@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                  loader: () => fetch('http://localhost:5000/addSpots'),
+                  loader: () => fetch('https://tourism-management-server-delta.vercel.app/addSpots'),
             },
             {
                 path: '/register',
@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
             {
                 path: '/allTouristsSpot',
                 element: <AllTouristsSpot></AllTouristsSpot>,
-                loader: () => fetch('http://localhost:5000/addSpots'),
+                loader: () => fetch('https://tourism-management-server-delta.vercel.app/addSpots'),
             },
             {
                 path: '/addTouristsSpot',
@@ -47,18 +47,19 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <ViewDetails></ViewDetails>,
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/addSpots'),
+                loader: () => fetch('https://tourism-management-server-delta.vercel.app/addSpots'),
             },
             {
                 path: '/SpotsSpecificCountry/:spotName',
                 element: <SpotsSpecificCountry></SpotsSpecificCountry>,
-                loader: () => fetch('http://localhost:5000/addSpots'),
+                loader: () => fetch('https://tourism-management-server-delta.vercel.app/addSpots'),
             },
             {
                 path: '/myList',
                 element: <PrivateRoute>
                     <MyList></MyList>
                 </PrivateRoute>,
+                loader: () => fetch('https://tourism-management-server-delta.vercel.app/addSpots'),
             },
             {
                 path: '/footer',

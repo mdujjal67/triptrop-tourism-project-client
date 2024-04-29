@@ -12,7 +12,7 @@ const AllTouristsSpot = () => {
   const [sortBy, setSortBy] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/addSpots')
+    fetch('https://tourism-management-server-delta.vercel.app/addSpots')
       .then(res => res.json())
       .then(data => {
         setCountries(data.sort((a, b) => a.averageCost - b.averageCost)); // Sort before setting countries
