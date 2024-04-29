@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../component/Navbar";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { Zoom } from "react-awesome-reveal";
 
 const AllTouristsSpot = () => {
     // const touristSpot = useLoaderData()
@@ -63,9 +64,11 @@ const AllTouristsSpot = () => {
                             <p className="text-gray-800 dark:text-gray-600 mb-4">Travel Time: {country.travelTime}</p>
                             <p className="text-gray-800 dark:text-gray-600">Seasonality: {country.Seasonality}</p>
                             
-                            <Link to={`/home/${country.spotName}`}>
-                                <button type="button" className="flex items-center justify-center w-full p-3 mt-5 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50 hover:text-black hover:bg-gray-300">View Details</button>
-                            </Link>
+                            <Zoom>
+                                <Link to={`/home/${country.spotName}`}>
+                                    <button type="button" className="flex items-center justify-center w-full p-3 mt-5 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50 hover:text-black hover:bg-gray-300">View Details</button>
+                                </Link>
+                            </Zoom>
                         </div>
                     </div>
                 ))}

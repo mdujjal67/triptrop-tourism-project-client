@@ -154,7 +154,9 @@ const Navbar = () => {
                             </Link>
                         }
                     </Zoom>
-                    <button onClick={handleSignOut} className="btn btn-sm btn-ghost hover:bg-violet-600 lg:ml-2 hover:text-white">Log Out</button>
+                    <Zoom>
+                        <button onClick={handleSignOut} className="btn btn-sm btn-ghost hover:bg-violet-600 lg:ml-2 hover:text-white">Log Out</button>
+                    </Zoom>
                 </div>
             </div>
             <Tooltip id="my-tooltip" effect="solid" place="top" className="custom-tooltip w-4" />
