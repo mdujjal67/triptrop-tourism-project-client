@@ -140,7 +140,7 @@ const Register = () => {
                             <IoLogoGithub className="text-white absolute top-3 left-[60px] text-[24px]" />
                         </div>
                         <div className="form-control mt-4 px-8 pb-6 relative">
-                            <button onClick={()=> handleGoogleLogin()} className="btn border-none text-[#00000082] hover:bg-gray-200">Continue with Google</button>
+                            <button onClick={()=> handleGoogleLogin()} className="btn border-none text-white bg-gray-400 hover:bg-gray-300">Continue with Google</button>
                             <FcGoogle className="absolute top-3 left-[60px] text-[24px]" />
                         </div>
                     </div>

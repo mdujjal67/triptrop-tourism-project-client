@@ -24,7 +24,7 @@ const MyList = () => {
 
 
     const handleUpdate = () => {
-        fetch(`http://localhost:5000/coffee/${_id}`, {
+        fetch(`https://tourism-management-server-delta.vercel.app/myList/${_id}`, {
         method: 'PUT',
         headers: {
             'content-type' : 'application/json'
@@ -52,60 +52,54 @@ const MyList = () => {
         <div>
             <Navbar></Navbar>
 
-            <div>
+            <div className="">
                 {
                     myItem.map(p => (
                         <div key={p._id}>
-                            <div className="overflow-x-auto">
+                            <div className="lg:overflow-x-auto">
                                 <table className="table">
                                     {/* head */}
                                     <thead>
                                         <tr>
-                                            <th>
-                                            </th>
-                                            <th>User</th>
-                                            <th>Spot Name</th>
-                                            <th>Average Cost</th>
-                                            <th></th>
+                                            <th className="text-[11px] lg:text-[16px]">User</th>
+                                            <th className="text-[11px] lg:text-[16px]">Spot Name</th>
+                                            <th className="text-[11px] lg:text-[16px]">Average Cost</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {/* row 1 */}
                                         <tr>
-                                            <th>
-                                                <label>
+                                            <th className="hidden lg:block">
+                                                <label >
                                                     <input type="checkbox" className="checkbox" />
                                                 </label>
                                             </th>
                                             <td>
-                                                <div className="flex items-center gap-3">
+                                                <div className="lg:flex items-center">
                                                     <div className="avatar">
-                                                        <div className="mask mask-squircle w-12 h-12">
+                                                        <div className="mask mask-squircle md:w-12 md:h-12 w-7 h-7">
                                                             <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Avatar Tailwind CSS Component" />
                                                         </div>
                                                     </div>
                                                     <div>
                                                         {/* <div className="font-bold">{user.displayName}</div> */}
-                                                        <div className="text-sm opacity-50">{user.email}</div>
+                                                        <div className="text-[10px] lg:text-sm opacity-50">{user.email}</div>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
+                                            <td className="text-[13px] md:text-[16px]">
                                                 Rangamati
                                                 <br />
                                             </td>
-                                            <td>220$</td>
-                                            <th>
+                                            <td className="text-[13px] lg:text-[16px]">220$</td>
+                                            <th className="-pl-5">
                                                 <button onClick={handleUpdate} className="btn btn-ghost btn-xs hover:bg-green-500 hover:text-white">Update</button>
-                                                <button className="btn btn-ghost btn-xs ml-5 hover:bg-red-500 hover:text-white">Delete</button>
+                                                <button className="btn btn-ghost btn-xs lg:ml-5 hover:bg-red-500 hover:text-white">Delete</button>
                                             </th>
                                         </tr>
-                                        {/* row 2 */}
                                     </tbody>
                                 </table>
                             </div>
-
-                            
                         </div>
                     ))
                 }

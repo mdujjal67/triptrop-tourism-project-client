@@ -131,7 +131,7 @@ const Login = () => {
                                     <Link to='/forgot-password' className="label-text-alt link link-hover">Forgot password?</Link>
                                 </label>
                                 <label className="">
-                                    <p className="text-[14px] w-[220px] mx-auto mt-2 text-[#00000082]">Do not have an account? <Link to='/register' className="hover:link font-semibold text-[14px] text-[#22be0a]">Sign Up</Link>
+                                    <p className="text-[14px] w-[220px] mx-auto mt-2 text-[#00000082]">Don't have an account? <Link to='/register' className="hover:link font-semibold text-[14px] text-[#22be0a]">Sign Up</Link>
                                     </p>
                                 </label>
                             </div>
@@ -153,7 +153,7 @@ const Login = () => {
                         </div>
                         {/* github login */}
                         <div className="form-control mt-4 px-8 pb-6 relative">
-                            <button onClick={() => handleSocialLogin(handleGoogleLogin)} className="btn border-none text-[#00000082] hover:bg-gray-300">Login with Google</button>
+                            <button onClick={() => handleSocialLogin(handleGoogleLogin)} className="btn border-none text-white bg-gray-400 hover:bg-gray-300">Login with Google</button>
                             <FcGoogle className="absolute top-3 left-[60px] text-[24px]" />
                         </div>
                     </div>
