@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Zoom } from 'react-awesome-reveal';
 import { IoLocationOutline } from "react-icons/io5";
 import { MdTravelExplore } from "react-icons/md";
 import { Link } from 'react-router-dom';
@@ -33,9 +34,11 @@ const TouristsSpotsCard = ({ touristSpot }) => {
                             </div>
                             <p className='absolute top-0 right-0 py-1 px-2 bg-violet-600 text-white rounded-xl text-[14px]'>{averageCost}</p>
                         </div>
+                        <Zoom>
                         <Link to={`/home/${spotName}`}>
                             <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50 hover:text-black hover:bg-gray-300">View Details</button>
                         </Link>
+                        </Zoom>
 
                     </div>
                 </div>

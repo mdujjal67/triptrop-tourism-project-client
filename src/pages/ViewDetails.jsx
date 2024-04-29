@@ -42,7 +42,7 @@ const ViewDetails = () => {
                             </div>
                             <h1 className='text-2xl font-bold'>{spotName}</h1>
                             <p className="dark:text-gray-800">{description}</p>
-                            <div className='flex justify-between items-center mt-5'>
+                            <div className='flex justify-between items-center mt-5 mb-2'>
                                 <div className='flex items-center gap-2 mt-2'>
                                     <IoLocationOutline className='text-violet-700 text-xl' />
                                     <p className=''>{location}</p>
@@ -52,11 +52,7 @@ const ViewDetails = () => {
                                     <p className=''>{totalVisitor}</p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <IoMdCash className="text-violet-600 text-xl" />
-                                <p className="py-3">{averageCost} (Average Cost)</p>
-                            </div>
-                            <div className="flex justify-between items-center">
+                            <div className="flex justify-between items-center mt-2">
                                 <div className="flex items-center gap-3">
                                     <TbBrandDaysCounter className="text-violet-600 text-xl" />
                                     <p>{travelTime} (Travel Time)</p>
@@ -65,6 +61,10 @@ const ViewDetails = () => {
                                     {Seasonality === "summer" ? <TiWeatherSunny className="text-[22px] text-violet-600" /> : <TiWeatherWindyCloudy className="text-[22px] text-violet-600" />}
                                     <p>{Seasonality}</p>
                                 </div>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <IoMdCash className="text-violet-600 text-xl" />
+                                <p className="py-3">{averageCost} (Average Cost)</p>
                             </div>
                         </div>
                     </div>
