@@ -11,6 +11,7 @@ import AddTouristsSpot from "../pages/AddTouristsSpot";
 import MyList from "../pages/MyList";
 import PrivateRoute from "../component/PrivateRoute";
 import ViewDetails from "../pages/ViewDetails";
+import SpotsSpecificCountry from "../pages/SpotsSpecificCountry";
 
 export const router = createBrowserRouter([
     {
@@ -46,6 +47,11 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <ViewDetails></ViewDetails>,
                 </PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/addSpots'),
+            },
+            {
+                path: '/SpotsSpecificCountry/:spotName',
+                element: <SpotsSpecificCountry></SpotsSpecificCountry>,
                 loader: () => fetch('http://localhost:5000/addSpots'),
             },
             {
