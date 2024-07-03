@@ -2,7 +2,7 @@
 
 # TripTrove Website
 
-Welcome to the TripTrove Tourism Management System! This platform allows users to explore and discover various tourist spots, along with detailed information and reviews.
+Welcome to the TripTrove Tourism Management System! TripTrove is a travel planning platform powered by React.js on the frontend and Node.js with MongoDB on the backend. It simplifies trip discovery, itinerary creation, and accommodation booking, offering a seamless user experience for travelers seeking unique adventures worldwide.
 
 ## Live Site URL
 
@@ -15,6 +15,18 @@ Welcome to the TripTrove Tourism Management System! This platform allows users t
 - **Personalized Spot Alerts**: Allow users to set up personalized spot alerts based on their preferences and criteria. Users can receive notifications via email or mobile app whenever new spots that match their criteria are added to the website, ensuring they stay updated on exciting destinations.
 - **Spot Submission**: Allow registered users to add new tourist spots to the platform. Provide a user-friendly interface for spot submission, including fields for spot name, location, description, category, amenities, and images. Implement validation to ensure the accuracy and completeness of spot information submitted by users, maintaining the quality of the platform's content.
 - **Responsive Design**: Ensure that the website is responsive and accessible across all devices, including desktops, laptops, tablets, and smartphones. Provide a seamless user experience regardless of the device used, allowing users to explore tourist spots effortlessly.
+
+
+## Technologies Used:
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **React.js**
+- **Node.js**
+- **Express.js**
+- **MondoDB**
+
+
 
 ## NPM packages:
 - **React Awesome reveal**
