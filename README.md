@@ -1,6 +1,6 @@
 # Tourism Management website
 
-# TripTrove Website
+## TripTrove Website Overview
 
 Welcome to the TripTrove Tourism Management System! TripTrove is a travel planning platform powered by React.js on the frontend and Node.js with MongoDB on the backend. It simplifies trip discovery, itinerary creation, and accommodation booking, offering a seamless user experience for travelers seeking unique adventures worldwide.
 
