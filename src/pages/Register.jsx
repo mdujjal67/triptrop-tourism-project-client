@@ -113,7 +113,7 @@ const Register = () => {
                                     </span>
                                 </a>
                                 {errors.password && <span className="text-red-500 text-[14px]">This field is required</span>}
-                                {/* input field error show */}
+                                {/* password validation field error show */}
                                 <div>
                                     {
                                         registerError && <p className="text-[12px] text-red-500">{registerError}</p>

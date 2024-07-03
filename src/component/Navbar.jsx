@@ -33,7 +33,7 @@ const Navbar = () => {
         localStorage.setItem("theme", theme)
         const localTheme = localStorage.getItem("theme");
         document.querySelector("html").setAttribute("data-theme", localTheme);
-    }, [theme])
+    }, [theme]);
 
     return (
         <div className="container mx-auto">
@@ -110,6 +110,7 @@ const Navbar = () => {
                     <div className="pr-10 mt-4 w-15 h-11 hidden lg:block">
 
                         {/* for tooltip content */}
+
                         {/* <a data-tooltip-id="my-tooltip" data-tooltip-content="Theme"></a> */}
                         <label className="swap swap-rotate">
 
