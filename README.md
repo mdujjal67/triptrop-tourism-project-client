@@ -16,7 +16,7 @@ Welcome to the TripTrove Tourism Management System! This platform allows users t
 - **Spot Submission**: Allow registered users to add new tourist spots to the platform. Provide a user-friendly interface for spot submission, including fields for spot name, location, description, category, amenities, and images. Implement validation to ensure the accuracy and completeness of spot information submitted by users, maintaining the quality of the platform's content.
 - **Responsive Design**: Ensure that the website is responsive and accessible across all devices, including desktops, laptops, tablets, and smartphones. Provide a seamless user experience regardless of the device used, allowing users to explore tourist spots effortlessly.
 
-- ## NPM packages:
+## NPM packages:
 - **React Awesome reveal**
 - **React Simple TypeWriter**
 - **Animate.css**
@@ -26,12 +26,12 @@ Welcome to the TripTrove Tourism Management System! This platform allows users t
 
 To run TripTrove on your local machine, follow these steps:
 
-    Clone the repository to your local machine.
-    Navigate into the project directory.
-    Install dependencies using npm.
-    Set up environment variables required for the project.
-    Start the server to run the backend.
-    Run the frontend to start the user interface.
-    Access TripTrove through your web browser at localhost.
+   - Clone the repository to your local machine.
+   - Navigate into the project directory.
+   - Install dependencies using npm.
+   - Set up environment variables required for the project.
+   - Start the server to run the backend.
+   - Run the frontend to start the user interface.
+   - Access TripTrove through your web browser at localhost.
 
 Make sure you have Node.js, npm, and MongoDB installed on your system before proceeding with these steps.
